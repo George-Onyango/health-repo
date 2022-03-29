@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:health_app/constants.dart';
+import 'package:health_app/constants/constants.dart';
 
 class PharmacyScreen extends StatelessWidget {
   const PharmacyScreen({Key? key}) : super(key: key);
