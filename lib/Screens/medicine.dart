@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:health_app/Screens/cart.dart';
 import 'package:health_app/constants/String.dart';
 import 'package:health_app/constants/constants.dart';
 
@@ -44,7 +45,13 @@ class PharmacyScreen extends StatelessWidget {
                         ),
                         const Spacer(),
                         IconButton(
-                          onPressed: () => Navigator.pushNamed(context, CART),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const ShoppingCart()));
+                          },
                           icon: const Icon(
                             Icons.shopping_cart,
                             color: Colors.white,
@@ -217,7 +224,7 @@ class Paracetamol extends StatelessWidget {
                           TextSpan(
                             text: "Tablet 500mg\n\n",
                             style:
-                                TextStyle(color: kHeadingText.withOpacity(0.5)),
+                                TextStyle(color: kTextColor.withOpacity(0.5)),
                           ),
                           const TextSpan(
                             text: "N 350",
@@ -288,7 +295,7 @@ class Doliprane extends StatelessWidget {
                           TextSpan(
                             text: "Tablet 500mg\n\n",
                             style:
-                                TextStyle(color: kHeadingText.withOpacity(0.5)),
+                                TextStyle(color: kTextColor.withOpacity(0.5)),
                           ),
                           const TextSpan(
                             text: "N 350",
@@ -359,7 +366,7 @@ class Paracetamol1 extends StatelessWidget {
                           TextSpan(
                             text: "Tablet 500mg\n\n",
                             style:
-                                TextStyle(color: kHeadingText.withOpacity(0.5)),
+                                TextStyle(color: kTextColor.withOpacity(0.5)),
                           ),
                           const TextSpan(
                             text: "N 350",
@@ -430,7 +437,7 @@ class Ibuprofen extends StatelessWidget {
                           TextSpan(
                             text: "Tablet 500mg\n\n",
                             style:
-                                TextStyle(color: kHeadingText.withOpacity(0.5)),
+                                TextStyle(color: kTextColor.withOpacity(0.5)),
                           ),
                           const TextSpan(
                             text: "N 350",

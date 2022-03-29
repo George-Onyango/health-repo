@@ -3,7 +3,7 @@ import 'package:health_app/Routes/routes.dart';
 import 'package:health_app/Screens/Appbar.dart';
 
 void main() {
-  runApp(const MyApp(router: null,),);
+  runApp( MyApp(router: AppRouter(),),);
 }
 
 class MyApp extends StatelessWidget {
