@@ -66,7 +66,14 @@ flutter:
     - images/image-4.jpeg
     - images/image-5.jpeg
     - images/image-6.jpeg
-    - assets/icons
+    - assets/icons/angle-left.svg
+    - assets/icons/comment-alt.svg
+    - assets/icons/home.svg
+    - assets/icons/search.svg
+    - assets/icons/shopping-cart-add.svg
+    - assets/icons/shopping-cart.svg
+    - assets/icons/user.svg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -83,6 +90,7 @@ flutter:
     - family: Proxima Nova
       fonts:
         - asset: assets/Proxima/Proxima Nova Alt Bold.otf
+          weight: 700
         - asset: assets/Proxima/Proxima Nova Alt Light.otf
         - asset: assets/Proxima/ProximaNova-Regular.otf
           weight: 600

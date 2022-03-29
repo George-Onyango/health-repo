@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:health_app/constants/String.dart';
 import 'package:health_app/constants/constants.dart';
 
 class PharmacyScreen extends StatelessWidget {
@@ -43,7 +44,7 @@ class PharmacyScreen extends StatelessWidget {
                         ),
                         const Spacer(),
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () => Navigator.pushNamed(context, CART),
                           icon: const Icon(
                             Icons.shopping_cart,
                             color: Colors.white,
