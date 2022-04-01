@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:health_app/constants.dart';
+import 'package:health_app/constanst/colors.dart';
 
 class PharmacyScreen extends StatelessWidget {
   const PharmacyScreen({Key? key}) : super(key: key);
@@ -216,7 +216,7 @@ class Paracetamol extends StatelessWidget {
                           TextSpan(
                             text: "Tablet 500mg\n\n",
                             style:
-                                TextStyle(color: kHeadingText.withOpacity(0.5)),
+                                TextStyle(color: kTextColor.withOpacity(0.5)),
                           ),
                           const TextSpan(
                             text: "N 350",
@@ -287,7 +287,7 @@ class Doliprane extends StatelessWidget {
                           TextSpan(
                             text: "Tablet 500mg\n\n",
                             style:
-                                TextStyle(color: kHeadingText.withOpacity(0.5)),
+                                TextStyle(color: kTextColor.withOpacity(0.5)),
                           ),
                           const TextSpan(
                             text: "N 350",
@@ -358,7 +358,7 @@ class Paracetamol1 extends StatelessWidget {
                           TextSpan(
                             text: "Tablet 500mg\n\n",
                             style:
-                                TextStyle(color: kHeadingText.withOpacity(0.5)),
+                                TextStyle(color: kTextColor.withOpacity(0.5)),
                           ),
                           const TextSpan(
                             text: "N 350",
@@ -429,7 +429,7 @@ class Ibuprofen extends StatelessWidget {
                           TextSpan(
                             text: "Tablet 500mg\n\n",
                             style:
-                                TextStyle(color: kHeadingText.withOpacity(0.5)),
+                                TextStyle(color: kTextColor.withOpacity(0.5)),
                           ),
                           const TextSpan(
                             text: "N 350",
