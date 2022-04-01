@@ -77,9 +77,31 @@ class ItemGroup extends StatelessWidget {
             ),
           ),
         ),
-        Expanded(
-          child: Column(
-            children: [],
+        Padding(
+          padding: const EdgeInsets.only(top: 18.0, left: 18.0, right: 18.0),
+          child: Container(
+            margin: const EdgeInsets.all(10),
+            child: Column(
+              children: [
+                Row(
+                  children: const [
+                    Headache(),
+                    Spacer(),
+                    Suppliments(),
+                  ],
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  children: const [
+                    Infants(),
+                    Spacer(),
+                    Cough(),
+                  ],
+                )
+              ],
+            ),
           ),
         ),
       ],
@@ -92,6 +114,85 @@ class Headache extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    Size size = MediaQuery.of(context).size;
+    return SizedBox(
+      width: size.width * 0.4,
+      child: Column(
+        children: [
+          Container(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10.9505),
+              child: Image.asset("images/headache.jpeg"),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class Suppliments extends StatelessWidget {
+  const Suppliments({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return SizedBox(
+      width: size.width * 0.4,
+      child: Column(
+        children: [
+          Container(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10.9505),
+              child: Image.asset("images/suppliments.jpeg"),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class Infants extends StatelessWidget {
+  const Infants({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return SizedBox(
+      width: size.width * 0.4,
+      child: Column(
+        children: [
+          Container(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10.9505),
+              child: Image.asset("images/infants.jpeg"),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class Cough extends StatelessWidget {
+  const Cough({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return SizedBox(
+      width: size.width * 0.4,
+      child: Column(
+        children: [
+          Container(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10.9505),
+              child: Image.asset("images/cough.jpeg"),
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
