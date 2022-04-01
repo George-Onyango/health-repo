@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:health_app/Routes/routes.dart';
 import 'package:health_app/Screens/Appbar.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp( MyApp(router: AppRouter(),),);
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({ Key? key }) : super(key: key);
+  const MyApp({ Key? key, required this.router }) : super(key: key);
+
+  final AppRouter? router;
 
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:health_app/constanst/colors.dart';
+=======
+import 'package:health_app/constants/colors.dart';
+>>>>>>> features
 
 class ProductScreen extends StatelessWidget {
   const ProductScreen({Key? key}) : super(key: key);

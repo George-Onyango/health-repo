@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:health_app/constanst/colors.dart';
+=======
+import 'package:health_app/Screens/cart.dart';
+import 'package:health_app/Screens/categories.dart';
+import 'package:health_app/constants/colors.dart';
+>>>>>>> features
 
 class PharmacyScreen extends StatelessWidget {
   const PharmacyScreen({Key? key}) : super(key: key);
@@ -43,7 +49,13 @@ class PharmacyScreen extends StatelessWidget {
                         ),
                         const Spacer(),
                         IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const ShoppingCart()));
+                          },
                           icon: const Icon(
                             Icons.shopping_cart,
                             color: Colors.white,
@@ -56,34 +68,7 @@ class PharmacyScreen extends StatelessWidget {
               ],
             ),
           ),
-          // Positioned(
-          //   left: 0,
-          //   right: 0,
-          //   child: Container(
-          //     alignment: Alignment.center,
-          //     height: 38,
-          //     decoration: BoxDecoration(
-          //       color: Colors.white.withOpacity(0.3),
-          //       borderRadius: BorderRadius.circular(10),
-          //     ),
-          //     child: TextField(
-          //       onChanged: (value) {},
-          //       decoration: const InputDecoration(
-          //         hintText: "Search",
-          //         hintStyle: TextStyle(
-          //           color: Colors.white,
-          //           fontSize: 18,
-          //         ),
-          //         enabledBorder: InputBorder.none,
-          //         focusedBorder: InputBorder.none,
-          //         suffixIcon: Icon(
-          //           Icons.search_off_outlined,
-          //           color: Colors.white,
-          //         ),
-          //       ),
-          //     ),
-          //   ),
-          // ),
+
           Row(
             children: [
               const Category(),
@@ -91,7 +76,14 @@ class PharmacyScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(right: 18.0),
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ItemGroup(),
+                      ),
+                    );
+                  },
                   child: const Text(
                     "View All",
                     style: TextStyle(
