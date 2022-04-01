@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:health_app/Screens/cart.dart';
 import 'package:health_app/constants/String.dart';
-import 'package:health_app/constants/constants.dart';
+import 'package:health_app/constants/colors.dart';
 
 class PharmacyScreen extends StatelessWidget {
   const PharmacyScreen({Key? key}) : super(key: key);
