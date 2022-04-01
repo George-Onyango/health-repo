@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:health_app/Screens/cart.dart';
-import 'package:health_app/constants/String.dart';
+import 'package:health_app/Screens/categories.dart';
 import 'package:health_app/constants/colors.dart';
 
 class PharmacyScreen extends StatelessWidget {
@@ -64,34 +64,7 @@ class PharmacyScreen extends StatelessWidget {
               ],
             ),
           ),
-          // Positioned(
-          //   left: 0,
-          //   right: 0,
-          //   child: Container(
-          //     alignment: Alignment.center,
-          //     height: 38,
-          //     decoration: BoxDecoration(
-          //       color: Colors.white.withOpacity(0.3),
-          //       borderRadius: BorderRadius.circular(10),
-          //     ),
-          //     child: TextField(
-          //       onChanged: (value) {},
-          //       decoration: const InputDecoration(
-          //         hintText: "Search",
-          //         hintStyle: TextStyle(
-          //           color: Colors.white,
-          //           fontSize: 18,
-          //         ),
-          //         enabledBorder: InputBorder.none,
-          //         focusedBorder: InputBorder.none,
-          //         suffixIcon: Icon(
-          //           Icons.search_off_outlined,
-          //           color: Colors.white,
-          //         ),
-          //       ),
-          //     ),
-          //   ),
-          // ),
+
           Row(
             children: [
               const Category(),
@@ -99,7 +72,14 @@ class PharmacyScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(right: 18.0),
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ItemGroup(),
+                      ),
+                    );
+                  },
                   child: const Text(
                     "View All",
                     style: TextStyle(

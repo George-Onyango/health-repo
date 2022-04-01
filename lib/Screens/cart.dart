@@ -1,56 +1,65 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:health_app/Screens/Appbar.dart';
-import 'package:health_app/constants/String.dart';
-import 'package:health_app/cubit/cart_cubit.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:health_app/constants/colors.dart';
 
 class ShoppingCart extends StatelessWidget {
   const ShoppingCart({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    // BlocProvider.of<CartCubit>(context).fetchCart();
-    Size size = MediaQuery.of(context).size;
+    var size = MediaQuery.of(context).size;
     return Column(
       children: [
-        Scaffold(
-          appBar: AppBar(
-            flexibleSpace: Container(
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.topRight,
-                    end: Alignment.bottomLeft,
-                    colors: [
-                      Color(0xffAD3BFC),
-                      Color(0xff7A08FA),
-                    ]),
+        Container(
+          height: size.height * 0.2,
+          decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topRight,
+                end: Alignment.bottomLeft,
+                colors: [kPurpleGradient2, kPurpleGradient],
               ),
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(20),
+                bottomRight: Radius.circular(20),
+              )),
+          child: Padding(
+            padding: const EdgeInsets.only(top: 28.0),
+            child: Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 18.0),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: SvgPicture.asset(
+                      "assets/icons/angle-left.svg",
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 18.0),
+                  child: SvgPicture.asset(
+                    "assets/icons/shopping-cart.svg",
+                    color: Colors.white,
+                  ),
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(left: 8.0),
+                  child: Text(
+                    "Cart",
+                    style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.w700,
+                      color: Colors.white,
+                    ),
+                  ),
+                )
+              ],
             ),
-            title: const Text(
-              "Cart",
-              style: TextStyle(
-                fontFamily: "Proxima Nova",
-                fontSize: 22,
-                fontWeight: FontWeight.w700,
-              ),
-            ),
-            elevation: 0.0,
-            bottomOpacity: 0.0,
           ),
         ),
-        // Container(
-        //   height: size.height*.05,
-        //   decoration: const BoxDecoration(
-        //     gradient: LinearGradient(
-        //       begin: Alignment.topRight,
-        //       end: Alignment.bottomLeft,
-        //       colors: [
-        //         Color(0xffAD3BFC),
-        //         Color(0xff7A08FA),
-        //       ]
-        //     )
-        //   ),
-        // ),
       ],
     );
   }
