@@ -11,85 +11,88 @@ class PharmacyScreen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return SingleChildScrollView(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(
-            height: size.height * 0.1,
-            child: Stack(
-              children: [
-                Container(
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topRight,
-                      end: Alignment.bottomLeft,
-                      colors: [
-                        Color(0xFF7A08FA),
-                        Color(0xFFAD3BFC),
-                      ],
-                    ),
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(20),
-                      bottomRight: Radius.circular(20),
-                    ),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                    child: Row(
-                      children: [
-                        const Text(
-                          "Pharmacy",
-                          style: TextStyle(
-                            fontSize: 22,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.white,
-                          ),
-                        ),
-                        const Spacer(),
-                        IconButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const ShoppingCart()));
-                          },
-                          icon: const Icon(
-                            Icons.shopping_cart,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
+          Container(
+            height: size.height * 0.2,
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topRight,
+                end: Alignment.bottomLeft,
+                colors: [kPurpleGradient2, kPurpleGradient],
+              ),
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(20),
+                bottomRight: Radius.circular(20),
+              ),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: Row(
+                children: [
+                  const Padding(
+                    padding: EdgeInsets.only(left: 18.0),
+                    child: Text(
+                      "Pharmacy",
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
-                ),
-              ],
+                  const Spacer(),
+                  IconButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ShoppingCart()));
+                    },
+                    icon: const Icon(
+                      Icons.shopping_cart,
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
-
-          Row(
+          Column(
             children: [
-              const Category(),
-              const Spacer(),
-              Padding(
-                padding: const EdgeInsets.only(right: 18.0),
-                child: TextButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const ItemGroup(),
+              Row(
+                children: [
+                  const Category(),
+                  const Spacer(),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 18.0),
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const ItemGroup(),
+                          ),
+                        );
+                      },
+                      child: const Text(
+                        "View All",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w600,
+                          color: kPrimaryColor,
+                        ),
                       ),
-                    );
-                  },
-                  child: const Text(
-                    "View All",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600,
-                      color: kPrimaryColor,
                     ),
                   ),
-                ),
+                ],
               ),
+              Row(
+                children: const[
+                  Category()
+                ],
+              )
             ],
           ),
           const SizedBox(
@@ -97,6 +100,24 @@ class PharmacyScreen extends StatelessWidget {
           ),
           Column(
             children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 18.0),
+                child: Row(
+                  children: [
+                    Text(
+                      "Suggestions",
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.w600,
+                        color: kTextColor.withOpacity(0.4),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
               Row(
                 children: const [
                   Paracetamol(),

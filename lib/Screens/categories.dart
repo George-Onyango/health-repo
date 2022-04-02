@@ -77,9 +77,31 @@ class ItemGroup extends StatelessWidget {
             ),
           ),
         ),
-        Expanded(
-          child: Column(
-            children: [],
+        Padding(
+          padding: const EdgeInsets.only(top: 18.0, left: 18.0, right: 18.0),
+          child: Container(
+            margin: const EdgeInsets.all(10),
+            child: Column(
+              children: [
+                Row(
+                  children: const [
+                    Headache(),
+                    Spacer(),
+                    Suppliments(),
+                  ],
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  children: const [
+                    Infants(),
+                    Spacer(),
+                    Cough(),
+                  ],
+                )
+              ],
+            ),
           ),
         ),
       ],
@@ -92,6 +114,118 @@ class Headache extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      width: size.width * 0.4,
+      child: const Center(
+        child: Text(
+          "Headache",
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
+            color: Colors.white,
+          ),
+        ),
+      ),
+      height: 200,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10.9505),
+        image: DecorationImage(
+            image: const ExactAssetImage("images/headache.jpeg"),
+            colorFilter: ColorFilter.mode(
+                Colors.black.withOpacity(0.3), BlendMode.dstATop)),
+      ),
+    );
+  }
+}
+
+class Suppliments extends StatelessWidget {
+  const Suppliments({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      width: size.width * 0.4,
+      child: const Center(
+        child: Text(
+          "Suppliments",
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
+            color: Colors.white,
+          ),
+        ),
+      ),
+      height: 200,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10.9505),
+        image: DecorationImage(
+          image: const ExactAssetImage("images/suppliments.jpeg"),
+          colorFilter: ColorFilter.mode(
+              Colors.black.withOpacity(0.3), BlendMode.dstATop),
+        ),
+      ),
+    );
+  }
+}
+
+class Infants extends StatelessWidget {
+  const Infants({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      width: size.width * 0.4,
+      child: const Center(
+        child: Text(
+          "Infants",
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
+            color: Colors.white,
+          ),
+        ),
+      ),
+      height: 200,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10.9505),
+        image: DecorationImage(
+            image: const ExactAssetImage("images/infants.jpeg"),
+            colorFilter: ColorFilter.mode(
+                Colors.black.withOpacity(0.3), BlendMode.dstATop)),
+      ),
+    );
+  }
+}
+
+class Cough extends StatelessWidget {
+  const Cough({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      width: size.width * 0.4,
+      child: const Center(
+        child: Text(
+          "Cough",
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
+            color: Colors.white,
+          ),
+        ),
+      ),
+      height: 200,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10.9505),
+        image: DecorationImage(
+            image: const ExactAssetImage("images/cough.jpeg"),
+            colorFilter: ColorFilter.mode(
+                Colors.black.withOpacity(0.3), BlendMode.dstATop)),
+      ),
+    );
   }
 }

@@ -63,6 +63,10 @@ flutter:
     - images/image-4.jpeg
     - images/image-5.jpeg
     - images/image-6.jpeg
+    - images/suppliments.jpeg
+    - images/infants.jpeg
+    - images/cough.jpeg
+    - images/headache.jpeg
     - assets/icons/angle-left.svg
     - assets/icons/comment-alt.svg
     - assets/icons/home.svg
