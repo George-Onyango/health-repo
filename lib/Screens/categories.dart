@@ -115,28 +115,25 @@ class Headache extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return SizedBox(
+    return Container(
       width: size.width * 0.4,
-      child: Column(
-        children: [
-          const Text(
-            "Headache",
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w500,
-              color: Colors.white,
-            ),
+      child: const Center(
+        child: Text(
+          "Headache",
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
+            color: Colors.white,
           ),
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10.9505),
-              image: const DecorationImage(
-                image: ExactAssetImage("images/headache.jpeg"),
-                fit: BoxFit.fill,
-              ),
-            ),
-          ),
-        ],
+        ),
+      ),
+      height: 200,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10.9505),
+        image: DecorationImage(
+            image: const ExactAssetImage("images/headache.jpeg"),
+            colorFilter: ColorFilter.mode(
+                Colors.black.withOpacity(0.3), BlendMode.dstATop)),
       ),
     );
   }
@@ -148,17 +145,26 @@ class Suppliments extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return SizedBox(
+    return Container(
       width: size.width * 0.4,
-      child: Column(
-        children: [
-          Container(
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(10.9505),
-              child: Image.asset("images/suppliments.jpeg"),
-            ),
-          )
-        ],
+      child: const Center(
+        child: Text(
+          "Suppliments",
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
+            color: Colors.white,
+          ),
+        ),
+      ),
+      height: 200,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10.9505),
+        image: DecorationImage(
+          image: const ExactAssetImage("images/suppliments.jpeg"),
+          colorFilter: ColorFilter.mode(
+              Colors.black.withOpacity(0.3), BlendMode.dstATop),
+        ),
       ),
     );
   }
@@ -170,17 +176,25 @@ class Infants extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return SizedBox(
+    return Container(
       width: size.width * 0.4,
-      child: Column(
-        children: [
-          Container(
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(10.9505),
-              child: Image.asset("images/infants.jpeg"),
-            ),
-          )
-        ],
+      child: const Center(
+        child: Text(
+          "Infants",
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
+            color: Colors.white,
+          ),
+        ),
+      ),
+      height: 200,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10.9505),
+        image: DecorationImage(
+            image: const ExactAssetImage("images/infants.jpeg"),
+            colorFilter: ColorFilter.mode(
+                Colors.black.withOpacity(0.3), BlendMode.dstATop)),
       ),
     );
   }
@@ -192,17 +206,25 @@ class Cough extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return SizedBox(
+    return Container(
       width: size.width * 0.4,
-      child: Column(
-        children: [
-          Container(
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(10.9505),
-              child: Image.asset("images/cough.jpeg"),
-            ),
-          )
-        ],
+      child: const Center(
+        child: Text(
+          "Cough",
+          style: TextStyle(
+            fontSize: 18,
+            fontWeight: FontWeight.w500,
+            color: Colors.white,
+          ),
+        ),
+      ),
+      height: 200,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10.9505),
+        image: DecorationImage(
+            image: const ExactAssetImage("images/cough.jpeg"),
+            colorFilter: ColorFilter.mode(
+                Colors.black.withOpacity(0.3), BlendMode.dstATop)),
       ),
     );
   }
