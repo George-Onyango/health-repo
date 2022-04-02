@@ -119,12 +119,23 @@ class Headache extends StatelessWidget {
       width: size.width * 0.4,
       child: Column(
         children: [
-          Container(
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(10.9505),
-              child: Image.asset("images/headache.jpeg"),
+          const Text(
+            "Headache",
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.w500,
+              color: Colors.white,
             ),
-          )
+          ),
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10.9505),
+              image: const DecorationImage(
+                image: ExactAssetImage("images/headache.jpeg"),
+                fit: BoxFit.fill,
+              ),
+            ),
+          ),
         ],
       ),
     );
