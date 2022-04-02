@@ -88,9 +88,6 @@ class PharmacyScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              Row(
-                children: const [Headache(), Suppliments(), Infants(), Cough()],
-              )
             ],
           ),
           const SizedBox(
