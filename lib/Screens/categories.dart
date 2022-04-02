@@ -122,15 +122,16 @@ class Headache extends StatelessWidget {
           "Headache",
           style: TextStyle(
             fontSize: 18,
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w600,
             color: Colors.white,
           ),
         ),
       ),
-      height: 200,
+      height: 140,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10.9505),
         image: DecorationImage(
+            fit: BoxFit.cover,
             image: const ExactAssetImage("images/headache.jpeg"),
             colorFilter: ColorFilter.mode(
                 Colors.black.withOpacity(0.3), BlendMode.dstATop)),
@@ -152,18 +153,20 @@ class Suppliments extends StatelessWidget {
           "Suppliments",
           style: TextStyle(
             fontSize: 18,
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w600,
             color: Colors.white,
           ),
         ),
       ),
-      height: 200,
+      height: 140,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10.9505),
         image: DecorationImage(
+          fit: BoxFit.cover,
           image: const ExactAssetImage("images/suppliments.jpeg"),
           colorFilter: ColorFilter.mode(
-              Colors.black.withOpacity(0.3), BlendMode.dstATop),
+              const Color.fromARGB(255, 2, 2, 2).withOpacity(0.3),
+              BlendMode.dstATop),
         ),
       ),
     );
@@ -183,15 +186,16 @@ class Infants extends StatelessWidget {
           "Infants",
           style: TextStyle(
             fontSize: 18,
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w600,
             color: Colors.white,
           ),
         ),
       ),
-      height: 200,
+      height: 140,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10.9505),
         image: DecorationImage(
+            fit: BoxFit.cover,
             image: const ExactAssetImage("images/infants.jpeg"),
             colorFilter: ColorFilter.mode(
                 Colors.black.withOpacity(0.3), BlendMode.dstATop)),
@@ -213,15 +217,16 @@ class Cough extends StatelessWidget {
           "Cough",
           style: TextStyle(
             fontSize: 18,
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w600,
             color: Colors.white,
           ),
         ),
       ),
-      height: 200,
+      height: 140,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10.9505),
         image: DecorationImage(
+            fit: BoxFit.cover,
             image: const ExactAssetImage("images/cough.jpeg"),
             colorFilter: ColorFilter.mode(
                 Colors.black.withOpacity(0.3), BlendMode.dstATop)),

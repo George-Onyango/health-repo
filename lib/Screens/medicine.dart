@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:health_app/Screens/cart.dart';
 import 'package:health_app/Screens/categories.dart';
 import 'package:health_app/constanst/colors.dart';
+import 'package:health_app/widget/category.dart';
 
 class PharmacyScreen extends StatelessWidget {
   const PharmacyScreen({Key? key}) : super(key: key);
@@ -88,11 +89,7 @@ class PharmacyScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              Row(
-                children: const[
-                  Category()
-                ],
-              )
+                 const CategoryList()
             ],
           ),
           const SizedBox(
