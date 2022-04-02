@@ -88,6 +88,11 @@ class PharmacyScreen extends StatelessWidget {
                   ),
                 ],
               ),
+              Row(
+                children: const[
+                  Category()
+                ],
+              )
             ],
           ),
           const SizedBox(
