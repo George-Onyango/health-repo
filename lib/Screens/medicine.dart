@@ -22,7 +22,7 @@ class PharmacyScreen extends StatelessWidget {
               gradient: LinearGradient(
                 begin: Alignment.topRight,
                 end: Alignment.bottomLeft,
-                colors: [kPurpleGradient2, kPurpleGradient],
+                colors: [kPurpleGradient2, kPurpleGradient,],
               ),
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(20),
