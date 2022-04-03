@@ -15,24 +15,28 @@ class ProductScreen extends StatelessWidget {
         Container(
           width: size.width * .5,
           alignment: Alignment.center,
-          child: const Text(
+          child:  Text(
             "Emzor Paracetamol",
             style: TextStyle(
               fontFamily: "Proxima Nova",
               fontSize: 20,
               fontWeight: FontWeight.w700,
+              color: kTextColor.withOpacity(0.6)
             ),
           ),
         ),
-        Container(
-          child: Text(
-            "Table - 500mg",
-            style: TextStyle(
-              fontSize: 18,
-              color: kTextColor.withOpacity(0.4),
-            ),
+        Text(
+          "Table - 500mg",
+          style: TextStyle(
+            fontSize: 18,
+            color: kTextColor.withOpacity(0.4),
           ),
         ),
+        Row(
+          children: const [
+            
+          ],
+        )
       ],
     );
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:health_app/Screens/cart.dart';
 import 'package:health_app/Screens/categories.dart';
+import 'package:health_app/Screens/product.dart';
 import 'package:health_app/constanst/colors.dart';
 import 'package:health_app/widget/category.dart';
 
@@ -89,7 +90,7 @@ class PharmacyScreen extends StatelessWidget {
                   ),
                 ],
               ),
-                 const CategoryList()
+              const CategoryList()
             ],
           ),
           const SizedBox(
@@ -192,7 +193,12 @@ class Paracetamol extends StatelessWidget {
         children: [
           Image.asset("images/image-1.jpeg"),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ProductScreen(),),);
+            },
             child: Container(
               // padding: const EdgeInsets.all(kDefaultPadding / 2),
               decoration: BoxDecoration(
